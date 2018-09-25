@@ -1,11 +1,11 @@
-# kernel-monitor-framework
+# Kernel Monitoring Framework 
 
-- Elaine Cole, elainemcole@wustl.edu 
-- Jesse Huang, jessehuang@wustl.edu 
+- Elaine Cole, elainemcole@wustl.edu
+- Jesse Huang, jessehuang@wustl.edu
 - Zhengliang Liu, zhengliang@wustl.edu
 
-## Module Design 
+## Module Design
 explanation here
 
-## Timer Design and Evalutation 
-explanation here 
+## Timer Design and Evaluation
+explanation here

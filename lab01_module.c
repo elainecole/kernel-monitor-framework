@@ -24,7 +24,7 @@ static ktime_t interval; // timer interval
 static struct hrtimer timer; // timer
 
 static int labfunction(void *something) {
-  printk(“labfunction is running”);
+  printk("labfunction is running");
   return 0;
 }
 
@@ -42,7 +42,7 @@ enum hrtimer_restart nextcall(struct hrtimer *some_timer) {
  * returns zero if successfully loaded, nonzero otherwise.
  */
 static int lab01_module_init(void)
-  task = kthread_run(labfunction, NULL, “mythread”):
+  task = kthread_run(labfunction, NULL, "mythread"):
   interval = ktime_set(log_sec, log_nsec);
   hrtimer_init(&timer, CLOCK_MONOTONIC, HRTIMER_MODE_REL);
   timer.function = &nextcall;

@@ -1,4 +1,6 @@
-
+/*
+ * lab01_module.c - The Lab 1 Kernel Module
+ */
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/module.h>
@@ -17,7 +19,7 @@ static ktime_t interval; // timer interval
 static struct hrtimer timer; // timer
 
 /*
- * nextcall - 
+ * nextcall -
  */
 enum hrtimer_restart nextcall(struct hrtimer *some_timer) {
   hrtimer_forward_now(some_timer, interval);

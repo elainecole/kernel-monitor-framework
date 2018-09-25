@@ -7,20 +7,19 @@
 #include <linux/moduleparam.h>
 #include <linux/hrtimer.h>
 #include <linux/ktime.h>
-#include <stdio.h>
 #include <linux/timer.h>
 
-static unsigned long log_sec = 1; // seconds, defaults to expire once/sec
-static unsigned long log_nsec = 0; // nanoseconds
-module_param(log_sec, unsigned long, 0);
-module_param(log_nsec, unsigned long, 0);
+static ulong log_sec = 1; // seconds, defaults to expire once/sec
+static ulong log_nsec = 0; // nanoseconds
+module_param(log_sec, ulong, 0);
+module_param(log_nsec, ulong, 0);
 
 static ktime_t interval; // timer interval
 static struct hrtimer timer; // timer
 
 /*
  * nextcall -
- */
+ *
 enum hrtimer_restart nextcall(struct hrtimer *some_timer) {
   hrtimer_forward_now(some_timer, interval);
   return HRTIMER_RESTART;
